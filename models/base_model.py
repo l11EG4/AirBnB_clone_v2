@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Made by LAILO and MEGA
+# mADE BY mega AND LAILO
 """This module defines a base class for all models in our hbnb clone"""
 import uuid
 from datetime import datetime
@@ -22,7 +22,6 @@ class BaseModel:
                                                      '%Y-%m-%dT%H:%M:%S.%f')
             del kwargs['__class__']
             self.__dict__.update(kwargs)
-
 
     def __str__(self):
         """Returns a string representation of the instance"""
