@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# Made by lailo and MEGa
 """This module defines a class User"""
 from models.base_model import BaseModel
 
