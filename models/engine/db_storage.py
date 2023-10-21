@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-# Made by LAILO and mEGA
-""" new class for sqlAlchemy """
+# Made by MEGA
+"""New class for sqlAlchemy """
 from os import getenv
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy import (create_engine)
@@ -15,7 +15,7 @@ from models.amenity import Amenity
 
 
 class DBStorage:
-    """ create the tables in environmental"""
+    """ Create tables in environmental"""
     __engine = None
     __session = None
 
@@ -56,23 +56,23 @@ class DBStorage:
         return (dic)
 
     def new(self, obj):
-        """add a new element in the table
+        """Add a new element in the table
         """
         self.__session.add(obj)
 
     def save(self):
-        """save changes
+        """Save changes
         """
         self.__session.commit()
 
     def delete(self, obj=None):
-        """delete an element in the table
+        """Delete an element in the table
         """
         if obj:
             self.session.delete(obj)
 
     def reload(self):
-        """configuration
+        """Configuration
         """
         Base.metadata.create_all(self.__engine)
         sec = sessionmaker(bind=self.__engine, expire_on_commit=False)

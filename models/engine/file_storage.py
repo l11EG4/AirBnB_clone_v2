@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-# Made by LAILO and MEGA
-"""This is the file storage class for AirBnB"""
+# Made by MEGA
+""" this is the file storage class for AirBnB"""
 import json
 from models.base_model import BaseModel
 from models.user import User
@@ -13,7 +13,7 @@ import shlex
 
 
 class FileStorage:
-    """This class serializes instances to a JSON file and
+    """ this class serializes instances to a JSON file and
     deserializes JSON file to instances
     Attributes:
         __file_path: path to the JSON file
