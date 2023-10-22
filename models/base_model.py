@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Made by MEGA
-""" this is the base model class for AirBnB"""
+""" this is the base model class 4 AirBnB"""
 from sqlalchemy.ext.declarative import declarative_base
 import uuid
 import models
@@ -22,7 +22,7 @@ class BaseModel:
         """Instantiation of base model class
         Args:
             args: it won't be used
-            kwargs: arguments for the constructor of the BaseModel
+            kwargs: arguments 4 the constructor of the BaseModel
         Attributes:
             id: unique id generated
             created_at: creation date
@@ -45,9 +45,9 @@ class BaseModel:
             self.created_at = self.updated_at = datetime.now()
 
     def __str__(self):
-        """returns a string
+        """returns a str
         Return:
-            returns a string of class name, id, and dictionary
+            returns a str of class name, id, and dictionary
         """
         return "[{}] ({}) {}".format(
             type(self).__name__, self.id, self.__dict__)

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 # Made by MEGA
 """ this is the place class"""
-from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import BaseModel, Base
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Table, String, Integer, Float, ForeignKey
 from sqlalchemy.orm import relationship
 from os import getenv
@@ -26,11 +26,11 @@ class Place(BaseModel, Base):
         city_id: city id
         user_id: user id
         name: name input
-        description: string of description
-        number_rooms: number of room in int
-        number_bathrooms: number of bathrooms in int
+        description: str of description
+        number_rooms: num of room in int
+        number_bathrooms: num of bathrooms in int
         max_guest: maximum guest in int
-        price_by_night:: pice for a staying in int
+        price_by_night:: pice 4 a staying in int
         latitude: latitude in flaot
         longitude: longitude in float
         amenity_ids: list of Amenity ids """
@@ -74,11 +74,11 @@ class Place(BaseModel, Base):
 
         @property
         def amenities(self):
-            """returns list of amenity ids """
+            """ returns list of amenity ids """
             return self.amenity_ids
 
         @amenities.setter
         def amenities(self, obj=None):
-            """appends amenity ids to the attribute """
+            """ appends amenity ids to the attribute """
             if type(obj) is Amenity and obj.id not in self.amenity_ids:
                 self.amenity_ids.append(obj.id)

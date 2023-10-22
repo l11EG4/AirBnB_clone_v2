@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 # Made by MEGA
 """ this is the state class"""
-from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import BaseModel, Base
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 import models
 from models.city import City
 import shlex
 
 
 class State(BaseModel, Base):
-    """ this is the class 4 State
+    """this is the Class 4 State
     Attributes:
         name: input name
     """

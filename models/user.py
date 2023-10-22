@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # Made by MEGA
 """ this is the user class"""
+from models.place import Place
 from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-from models.place import Place
 from models.review import Review
 
 
@@ -14,7 +14,7 @@ class User(BaseModel, Base):
     Attributes:
         email: email address
         password: password for you login
-        first_name: first name
+        first_name: 1st name
         last_name: last name
     """
     __tablename__ = "users"

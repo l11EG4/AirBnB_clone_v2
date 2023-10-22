@@ -8,7 +8,7 @@ from models.place import place_amenity
 
 
 class Amenity(BaseModel, Base):
-    """ this is the class for Amenity
+    """ this is the class 4 Amenity
     attributes:
         name: input name
     """
